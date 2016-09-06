@@ -25,6 +25,7 @@ body {
   color: #222;
   background: #f7f5f0;
   font-size: 12px;
+  background: #fff;
 }
 
 .clearfix {
@@ -40,7 +41,7 @@ a {
   font-weight: 700;
 }
 a:hover {
-  color: #FF8B11;
+  color: #E6A234;
 }
 
 a.social {
@@ -73,6 +74,8 @@ nav {
   display: flex;
   flex: 1;
   padding: 0 10%;
+  background: #fff;
+  box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.17);
 }
 
 .nav-list {
@@ -100,6 +103,26 @@ nav ul li {
 #list-icon {
   display: none;
 }
+
+.bottom-nav {
+  background: #67676B;
+  margin-top: 8.3333333em;
+  justify-content: flex-start
+}
+
+.bottom-nav ul{
+  justify-content: flex-start
+}
+
+.bottom-nav a{
+  color: #fff;
+}
+
+.bottom-nav a:hover{
+  color: #E6A234;
+}
+
+
 /* ------------------------*/ /* ---------->>> UI ELEMENTS <<<-----------*/ /* ------------------------*/
 
 header {
@@ -258,17 +281,18 @@ label {
   outline: none;
 }
 
-.portfolio-container {
+/*.portfolio-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+}*/
 
 .portfolio-container img{
   margin: 30px;
   box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.22);
   transition: all .2s ease-in-out;
+  max-width: 50%;
 }
 
 .portfolio-container img:hover{
@@ -276,7 +300,14 @@ label {
   cursor: pointer;
 }
 
+/* ------------------------*/ /* ---------->>> 1388px <<<-----------*/ /* ------------------------*/
+@media screen and (max-width: 1388px) {
 
+  #email-input {
+    float: left;
+  }
+
+}
 
 /* ------------------------*/ /* ---------->>> 600px <<<-----------*/ /* ------------------------*/
 @media screen and (max-width: 600px) {
@@ -298,6 +329,23 @@ label {
     display: none;
   }
 
+  main div p {
+    font-size: 1.5em;
+  }
+
+  .bottom-nav {
+    height: inherit;
+  }
+
+  .bottom-nav ul li{
+    display: block;
+  }
+
+  .bottom-nav ul{
+    margin: 0 auto;
+    padding: 0;
+  }
+
 }
 
 /* ------------------------*/ /* ---------->>> 320px <<<-----------*/ /* ------------------------*/
@@ -310,6 +358,14 @@ label {
 
   header {
     height: 96vh;
+  }
+
+  main div p {
+    font-size: 1.25em;
+  }
+
+  .contact-form {
+    padding: 0 10%;
   }
 
 }
