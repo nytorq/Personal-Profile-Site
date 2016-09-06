@@ -7,12 +7,25 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script>
+    function OpenNavList() {
+    var x = document.getElementById("responsive-top-nav");
+    if (x.className === "top-nav") {
+      x.className += " responsive";
+    } else {
+      x.className = "top-nav"
+    }
+
+    }
+  </script>
 </head>
   <body>
 
-    <nav class="top-nav">
+    <nav class="top-nav" id="responsive-top-nav">
       <a href="index.html" id="logo">Charlie Prator</a>
-      <a href="#" id="list-icon"><i class="material-icons">list</i></a>
+      <a href="javascript:void(0);" id="list-icon" onclick="OpenNavList()">
+        <i class="material-icons">list</i>
+      </a>
       <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="#about-me">About</a></li>
